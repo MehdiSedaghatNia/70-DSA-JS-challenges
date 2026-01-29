@@ -49,15 +49,12 @@ const calculator3 = (num1, num2, operator) => {
 
 // --------------------------------------
 // Challenge Upgrade(by myself): A function that takes any number of arguments as number
+// --------------------------------------
 
 // Solution 1: (reduce)
 
-const calculator4 = (operator, ...numbers) => {
-  return numbers.reduce((a, b) => eval(`${a} ${operator} ${b}`));
-};
-
-const result4 = calculator4("+", 5, 5, 5);
-console.log(result4);
+const calculator4 = (operator, ...numbers) =>
+  numbers.reduce((a, b) => eval(`${a} ${operator} ${b}`));
 
 // --------------------------------------
 // Solution 1: (eval())
@@ -66,6 +63,3 @@ const calculator5 = (operator, ...numbers) => {
   const result = eval(expression);
   return result;
 };
-
-const result5 = calculator5("+", 4, 5, 6);
-console.log(result5);
